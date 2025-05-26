@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gmail Style Navbar</title>
+  <!-- Font Awesome CDN for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-left">
+      <button class="menu-btn" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="gmail-logo">Gmail</div>
+    </div>
+
+    <div class="navbar-center">
+      <div class="search-bar">
+        <input
+          type="search"
+          placeholder="Search mail"
+          aria-label="Search mail"
+          id="searchInput"
+          autocomplete="off"
+        />
+        <i class="fas fa-magnifying-glass"></i>
+        <i class="fas fa-xmark" id="clearSearch"></i>
+      </div>
+    </div>
+
+    <div class="navbar-right">
+      <button class="apps-btn" aria-label="Google apps">
+        <i class="fas fa-th"></i>
+      </button>
+      <img
+        src="https://randomuser.me/api/portraits/women/44.jpg"
+        alt="Profile"
+        class="profile-img"
+      />
+    </div>
+  </header>
+
+  <script src="script.js"></script>
+</body>
+</html>
