@@ -1,0 +1,102 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300;400;700&display=swap');
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #fefae0, #f3efea);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Menu Card Styling */
+.menu-card {
+    background-color: #fff;
+    width: 420px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: scale(1.02);
+}
+
+/* Header Styling */
+.menu-header {
+    margin-bottom: 20px;
+}
+
+.menu-header h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 4rem;
+    color: #a96a2c;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+}
+
+.menu-header p {
+    font-size: 1.1rem;
+    color: #7b5e3c;
+    font-weight: 400;
+}
+
+/* Menu Items Styling */
+.menu-items {
+    text-align: left;
+}
+
+.menu-section {
+    margin-bottom: 25px;
+}
+
+.menu-section h2 {
+    font-size: 1.4rem;
+    color: #a96a2c;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e9dcd0;
+    padding-bottom: 5px;
+    font-weight: 700;
+}
+
+/* Menu List Items */
+.menu-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-section li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed #e9dcd0;
+    transition: background-color 0.2s ease;
+}
+
+.menu-section li:hover {
+    background-color: #fdf7f1;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.item-name {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #5a4637;
+}
+
+.item-price {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #5a4637;
+}

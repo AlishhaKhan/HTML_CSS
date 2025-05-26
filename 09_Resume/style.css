@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 1200px;
+}
+
+.form-section, .resume-preview {
+  flex: 1;
+  padding: 20px;
+}
+
+.form-section {
+  border-right: 2px solid #e0e0e0;
+}
+
+.form-section h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #0072ff;
+}
+
+form section {
+  margin-bottom: 20px;
+}
+
+form h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #0072ff;
+  outline: none;
+}
+
+#generate {
+  width: 100%;
+  padding: 12px;
+  background-color: #0072ff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#generate:hover {
+  background-color: #005ecb;
+}
+
+.resume-preview {
+  background-color: #f5f7fa;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+}
+
+.profile-image-container {
+  margin-bottom: 20px;
+}
+
+#profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #0072ff;
+  object-fit: cover;
+}
+
+.resume-preview h1 {
+  font-size: 24px;
+  color: #0072ff;
+}
+
+.resume-preview h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.resume-preview h3 {
+  color: #0072ff;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.resume-preview p {
+  margin-bottom: 5px;
+}
+
+#download-pdf {
+  margin-top: 20px;
+  background-color: #0072ff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#download-pdf:hover {
+  background-color: #005ecb;
+}

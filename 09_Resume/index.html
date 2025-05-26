@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Resume Builder</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="form-section">
+      <h1>📄 Resume Builder</h1>
+      <form id="resume-form">
+        <section>
+          <h2>👤 Personal Info</h2>
+          <input type="text" id="name" placeholder="Full Name" required />
+          <input type="text" id="title" placeholder="Job Title" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="tel" id="phone" placeholder="Phone Number" required />
+          <input type="file" id="image-upload" accept="image/*" />
+        </section>
+
+        <section>
+          <h2>💼 Work Experience</h2>
+          <input type="text" id="company" placeholder="Company Name" />
+          <input type="text" id="position" placeholder="Position" />
+          <input type="text" id="duration" placeholder="Duration" />
+        </section>
+
+        <section>
+          <h2>🎓 Education</h2>
+          <input type="text" id="school" placeholder="School Name" />
+          <input type="text" id="degree" placeholder="Degree" />
+          <input type="text" id="year" placeholder="Graduation Year" />
+        </section>
+
+        <section>
+          <h2>🛠️ Skills</h2>
+          <input type="text" id="skills" placeholder="Skills (comma-separated)" />
+        </section>
+
+        <button type="button" id="generate">Generate Resume</button>
+      </form>
+    </div>
+
+    <div class="resume-preview" id="resume-preview">
+      <div class="profile-image-container">
+        <img id="profile-image" src="" alt="Profile Picture" />
+      </div>
+      <h1 id="preview-name">Full Name</h1>
+      <h2 id="preview-title">Job Title</h2>
+      <p id="preview-email">Email</p>
+      <p id="preview-phone">Phone Number</p>
+
+      <h3>Work Experience</h3>
+      <p id="preview-company">Company:</p>
+      <p id="preview-position">Position:</p>
+      <p id="preview-duration">Duration:</p>
+
+      <h3>Education</h3>
+      <p id="preview-school">School:</p>
+      <p id="preview-degree">Degree:</p>
+      <p id="preview-year">Year:</p>
+
+      <h3>Skills</h3>
+      <p id="preview-skills">Skills:</p>
+
+      <button id="download-pdf">⬇️ Download as PDF</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
