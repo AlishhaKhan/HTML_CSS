@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dark & Light Skeleton Loading - Keyboard Unboxing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="toggle-theme">
+      <button id="themeBtn">Switch to Dark Mode</button>
+    </div>
+
+    <div class="keyboard-unboxing">
+      <div class="keyboard-skeleton">
+        <div class="keyboard-top"></div>
+        <div class="keyboard-keys">
+          <!-- simulate keyboard keys skeleton -->
+          <div class="key-row">
+            <div class="key"></div>
+            <div class="key"></div>
+            <div class="key"></div>
+            <div class="key"></div>
+            <div class="key"></div>
+            <div class="key"></div>
+          </div>
+          <div class="key-row">
+            <div class="key"></div>
+            <div class="key"></div>
+            <div class="key"></div>
+            <div class="key"></div>
+            <div class="key"></div>
+          </div>
+          <div class="key-row">
+            <div class="key"></div>
+            <div class="key"></div>
+            <div class="key"></div>
+            <div class="key"></div>
+          </div>
+        </div>
+        <div class="keyboard-base"></div>
+      </div>
+
+      <div class="text-skeleton">
+        <div class="line short"></div>
+        <div class="line medium"></div>
+        <div class="line long"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const btn = document.getElementById('themeBtn');
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      if (document.body.classList.contains('dark')) {
+        btn.textContent = 'Switch to Light Mode';
+      } else {
+        btn.textContent = 'Switch to Dark Mode';
+      }
+    });
+  </script>
+</body>
+</html>
