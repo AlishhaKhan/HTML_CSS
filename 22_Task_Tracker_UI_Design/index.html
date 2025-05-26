@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task Tracker UI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="task-tracker">
+    <header>
+      <h1>My Tasks</h1>
+      <button class="add-task-btn">+ Add Task</button>
+    </header>
+    <div class="task-list">
+      <div class="task-item">
+        <input type="checkbox" id="task1" />
+        <label for="task1">Finish the project documentation</label>
+        <button class="delete-btn" aria-label="Delete Task">&times;</button>
+      </div>
+      <div class="task-item completed">
+        <input type="checkbox" id="task2" checked />
+        <label for="task2">Email the client for feedback</label>
+        <button class="delete-btn" aria-label="Delete Task">&times;</button>
+      </div>
+      <div class="task-item">
+        <input type="checkbox" id="task3" />
+        <label for="task3">Plan next sprint tasks</label>
+        <button class="delete-btn" aria-label="Delete Task">&times;</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
