@@ -1,0 +1,56 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #faf8ef;
+  margin: 0;
+}
+
+.game-container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #776e65;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: repeat(4, 80px);
+  gap: 10px;
+  background-color: #bbada0;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: max-content;
+}
+
+.tile {
+  width: 80px;
+  height: 80px;
+  background-color: #cdc1b4;
+  color: #776e65;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.tile-2    { background-color: #eee4da; }
+.tile-4    { background-color: #ede0c8; }
+.tile-8    { background-color: #f2b179; color: #fff; }
+.tile-16   { background-color: #f59563; color: #fff; }
+.tile-32   { background-color: #f67c5f; color: #fff; }
+.tile-64   { background-color: #f65e3b; color: #fff; }
+.tile-128  { background-color: #edcf72; color: #fff; }
+.tile-256  { background-color: #edcc61; color: #fff; }
+.tile-512  { background-color: #edc850; color: #fff; }
+.tile-1024 { background-color: #edc53f; color: #fff; }
+.tile-2048 { background-color: #edc22e; color: #fff; }
