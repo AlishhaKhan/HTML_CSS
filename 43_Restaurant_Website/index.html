@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ahsilay Cook</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Ahsilay <span>Cook</span></h1>
+      <ul id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="burger" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
+
+  <div class="hero">
+  <div class="floating-circles">
+    <span style="--i:1;"></span>
+    <span style="--i:2;"></span>
+    <span style="--i:3;"></span>
+    <span style="--i:4;"></span>
+    <span style="--i:5;"></span>
+  </div>
+  <div class="hero-content">
+    <h2>Ahsilay Cook</h2>
+    <p>Delicious meals made with love and passion.</p>
+    <a href="#menu" class="btn">Explore Menu</a>
+  </div>
+</div>
+
+
+  <section id="menu" class="menu">
+    <h2>Our Menu</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="biryani.png" alt="Biryani" />
+        <h3>Spicy Biryani</h3>
+        <p>Deliciously layered rice and chicken spiced to perfection.</p>
+      </div>
+      <div class="card">
+        <img src="burger.png" alt="Burger" />
+        <h3>Classic Burger</h3>
+        <p>Juicy beef patty with melted cheese & fresh veggies.</p>
+      </div>
+      <div class="card">
+        <img src="pasta.png" alt="Pasta" />
+        <h3>Italian Pasta</h3>
+        <p>Creamy Alfredo pasta made with fresh herbs and garlic.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+      Ahsilay Cook is a vibrant culinary space born from passion for flavor and
+      tradition. We combine taste, color, and creativity to offer dishes that
+      delight your senses and satisfy your soul.
+    </p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Ahsilay Cook. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
