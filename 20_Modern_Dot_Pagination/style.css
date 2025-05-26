@@ -1,0 +1,35 @@
+body {
+  background-color: #b5d9ee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pagination {
+  display: flex;
+  gap: 16px;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  background-color: #f0d5e4; /* Light gray */
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot:hover {
+  background-color: #2563eb; /* Bright blue on hover */
+  transform: scale(1.3);
+}
+
+.dot.active {
+  background: linear-gradient(135deg, #4f46e5, #3b82f6); /* Gradient blue */
+  box-shadow: 0 0 8px rgba(59,130,246,0.6);
+  transform: scale(1.4);
+}
