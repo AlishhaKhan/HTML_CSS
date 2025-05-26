@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Popup UI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="popup-overlay" id="popup">
+    <div class="popup-box">
+      <h2>Subscribe Now</h2>
+      <p>Get the latest updates delivered straight to your inbox!</p>
+      <input type="email" placeholder="Enter your email" />
+      <div class="popup-actions">
+        <button class="btn primary">Subscribe</button>
+        <button class="btn secondary" onclick="closePopup()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="show-btn" onclick="document.getElementById('popup').style.display='flex'">Show Popup</button>
+
+  <script>
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
