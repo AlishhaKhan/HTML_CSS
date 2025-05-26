@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ahsilay | Elegant Dresses for Women</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Ahsilay</div>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="burger" id="burger">&#9776;</div>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Grace & Style<br /><span>Your Perfect Dress Awaits</span></h1>
+      <p>Discover the latest trends in women's fashion with Ahsilay's exclusive collection.</p>
+      <a href="#collections" class="btn">Shop Now</a>
+    </div>
+    <div class="hero-image">
+      <img src="elegant.png" alt="Elegant Dress" />
+    </div>
+  </section>
+
+  <section id="collections" class="collections">
+    <h2>Our Collections</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="casual.png" alt="Casual Dresses" />
+        <h3>Casual Dresses</h3>
+        <p>Comfort meets style with everyday casual wear.</p>
+      </div>
+      <div class="card">
+        <img src="party.png" alt="Party Dresses" />
+        <h3>Party Dresses</h3>
+        <p>Stand out at every celebration with our stunning party collection.</p>
+      </div>
+      <div class="card">
+        <img src="formal.png" alt="Formal Dresses" />
+        <h3>Formal Dresses</h3>
+        <p>Elegant and timeless pieces for all your special occasions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Ahsilay</h2>
+    <p>
+      At Ahsilay, we believe every woman deserves to feel confident and beautiful.  
+      Our carefully curated collections blend modern trends with timeless elegance to bring you dresses that inspire and empower.
+    </p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Get in Touch</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Ahsilay. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Responsive burger menu toggle
+    const burger = document.getElementById('burger');
+    const navLinks = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
+      burger.classList.toggle('toggle');
+    });
+  </script>
+</body>
+</html>
