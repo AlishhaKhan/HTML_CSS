@@ -1,0 +1,23 @@
+body {
+  background: #0b3d0b;
+  color: #c8f7c5;
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+canvas {
+  background: #193d19;
+  border: 4px solid #3aff3a;
+}
+
+h1 {
+  color: #9aff9a;
+}
+
+#score {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
