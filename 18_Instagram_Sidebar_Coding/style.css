@@ -1,0 +1,198 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  background: #fafafa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #262626;
+  overflow-x: hidden; /* horizontal scroll hataane ke liye */
+}
+
+/* Sidebar fixed width */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  background: #fff;
+  border-right: 1px solid #dbdbdb;
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.06);
+  z-index: 10;
+  overflow-y: auto; /* agar content lamba hua to scroll ho */
+}
+
+/* Logo */
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #262626;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 30px 30px 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo i {
+  color: #405de6; /* Instagram blue */
+  font-size: 32px;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 30px;
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #262626;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+
+.nav-links a i {
+  font-size: 20px;
+  color: #8e8e8e;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: #efefef;
+  color: #262626;
+}
+
+.nav-links a:hover i,
+.nav-links a.active i {
+  color: #262626;
+}
+
+/* Badge for notifications/messages */
+.nav-links a.with-badge {
+  padding-right: 40px; /* space for badge */
+}
+
+.nav-links a.with-badge .badge {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  background: #ed4956; /* Instagram red */
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  line-height: 18px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 0 6px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  user-select: none;
+}
+
+/* More link at bottom */
+.more {
+  margin-top: auto;
+  padding: 20px 30px 30px 30px;
+}
+
+.more a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #262626;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.more a i {
+  font-size: 20px;
+  color: #8e8e8e;
+  transition: color 0.3s ease;
+}
+
+.more a:hover {
+  background-color: #efefef;
+  border-color: #dbdbdb;
+}
+
+.more a:hover i {
+  color: #262626;
+}
+
+/* Content area margin to avoid overlap */
+.content {
+  margin-left: 280px;  /* sidebar width */
+  padding: 50px 40px;
+  flex: 1;
+  background: #fff;
+  min-height: 100vh;
+  box-shadow: inset 0 0 25px rgba(0,0,0,0.03);
+  border-radius: 12px 0 0 12px;
+  overflow-x: hidden;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    box-shadow: none;
+    padding: 15px 20px;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 10px;
+  }
+
+  .nav-links a {
+    padding: 10px 6px;
+    font-size: 14px;
+  }
+
+  .nav-links a i {
+    font-size: 18px;
+  }
+
+  .more {
+    display: none;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 25px 20px;
+    border-radius: 0;
+  }
+}
