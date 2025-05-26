@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Word Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <h1>🔤 The Word Game</h1>
+    <p id="hiddenWord">_ _ _ _ _</p>
+    <input type="text" id="letterInput" maxlength="1" placeholder="Type a letter" />
+    <button onclick="checkLetter()">Guess</button>
+    <p id="message">Guess the word one letter at a time!</p>
+    <p id="usedLetters">Used letters: </p>
+    <button onclick="resetGame()">🔄 Reset</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
