@@ -1,0 +1,276 @@
+:root {
+  --bg-light: #fff;
+  --bg-dark: #111;
+  --text-light: #000;
+  --text-dark: #f9f9f9;
+  --accent: #e91e63;
+}
+
+[data-theme="light"] {
+  --bg: var(--bg-light);
+  --text: var(--text-light);
+}
+
+[data-theme="dark"] {
+  --bg: var(--bg-dark);
+  --text: var(--text-dark);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+html, body {
+  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.controls button {
+  margin-left: 1rem;
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+.controls button:hover {
+  color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #ffe0ed, #fff);
+  animation: fadeIn 1s ease-in;
+}
+
+.hero h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--accent);
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(233, 30, 99, 0.4);
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #c2185b;
+  box-shadow: 0 6px 15px rgba(194, 24, 91, 0.6);
+}
+
+/* Products Section */
+.products {
+  padding: 4rem 1rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.product {
+  background: var(--bg-light);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.product img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(233, 30, 99, 0.3);
+}
+
+.product h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.product p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: var(--accent);
+}
+
+.add-to-cart {
+  padding: 0.6rem 1.3rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background: #c2185b;
+  box-shadow: 0 4px 12px rgba(194, 24, 91, 0.6);
+}
+
+/* About & Contact Sections */
+.about, .contact {
+  padding: 3rem 1rem;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+}
+
+.about h2, .contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact input, .contact textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.contact input:focus, .contact textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.contact button.btn {
+  width: 150px;
+  align-self: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--bg);
+  font-size: 0.9rem;
+  color: var(--text);
+  border-top: 1px solid #ccc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive for Laptop */
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
